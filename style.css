@@ -24,11 +24,43 @@
     color: #03a9f4;
     animation: animate 3s ease-in-out infinite;
 }
-.text img{
+/* .text .water{
     margin-top:200px ;
     margin-left: 100px;
-    height: 100% !important;
     width: 100% !important;
+    height: 500px !important;
+    border-radius: 100%;
+    border: 5px solid #03a9f4;
+    font-size: 1.2rem;
+
+} */
+
+.box{
+    width:500px;
+    height: 300px;
+    border: 10px solid rgb(51, 35, 145);
+    border-radius: 10px;
+    line-height: 200px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    margin-top: 200px;
+    margin-left: 200px;
+}
+.box:before{
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background-color: #03a9f4;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 40%;
+    animation: fill 7s ease-in-out infinite;
+    z-index: -1;
 }
 .text {
     display: flex;
@@ -43,6 +75,8 @@
     color: rgb(177, 174, 174);
     font-weight:100;
     line-height: 2;
+    width: 500px;
+    font-size: 1.2rem;
 }
 @keyframes animate{
     0%,100%{
@@ -55,13 +89,36 @@
 
     }
 }
+@keyframes fill {
+    from{
+        top:250px;
+        transform: translate(-50%) rotate(0deg);
+    }
+    to{
+        top:-50px;
+        transform: translate(-50%) rotate(360deg);
+    }
+}
 @media only screen and (max-width:768px){
- 
+ body{
+     overflow-x: hidden;
+ }
+ .box{
+    width:300px;
+    height: 300px;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
 .text {
     display: inline;
 }
 .text p{
-    margin-top: 60px;
+    margin-top: 10px;
+    font-size: 1rem;
+    margin-left: 0;
+    width: 100%;
 }
 .text img{
     margin-top: 50px;
@@ -69,8 +126,10 @@
 }
 .content{
     margin-left: 10px;
+
 }
 .content h2{
     font-size: 2em;
+
 }
 }
