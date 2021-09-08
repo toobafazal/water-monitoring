@@ -201,15 +201,19 @@ h1{
 .mycontainer .mycard:hover .face.face1{
     background: cornflowerblue;
 }
-.mycontainer .mycard .face.face1 .content{
+.mycontainer .mycard .face.face2 .content{
     opacity: 0.2;
     transition: 0.5s;
     text-align: justify;
+    padding: 0;
+    margin: 0;
 }
 
 .mycontainer .mycard .face.face1 .content img{
     max-width: 300px;
     border-radius: 50px;
+    margin: 0;
+    
 }
 .mycontainer .mycard .face.face1 .content h3{
     margin: 10px 0 0;
