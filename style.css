@@ -196,7 +196,7 @@ h1{
     justify-content: center;
     align-items: center;
     z-index: -1;
-    transform: translateY(100px);
+    transform: translateY(50px);
 }
 .mycontainer .mycard:hover .face.face1{
     background: cornflowerblue;
